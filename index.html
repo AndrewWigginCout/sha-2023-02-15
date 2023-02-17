@@ -1,4 +1,16 @@
 <meta charset="UTF-8">
+<p>This app will deterministically generate passwords using a string as a seed.
+Suggested usage is to find a random excerpt from a random book that you can remember.
+Then you will be able to reconstruct your passwords in the future in case you forget them.
+Since each password has a random word from a pool of 2^16 words and a random punctuation mark,
+numeral, and character, each password is about 15 bits of entropy. Notice that the passwords
+have uppercase, lowercase, digits and punctuation marks in them using the entire ASCII space. 
+This will slow a potential brute force attack.</p>
+<p>The hexadecimals in the output are the intermediate seed to generate the password.
+The password itself is the english word followed by the "cherry" of 3 characters.</p>
+<p>But the hexadecimal number contains the same information.</p>
+<p>The calculation is done locally, but you should take care to vet that statement 
+and be warned not to trust random apps with your passwords.</p>
 <code class="output" id="output">hash output</code>
 <textarea class="output" rows="8" cols="60"></textarea>
 <br>
