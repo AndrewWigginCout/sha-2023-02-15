@@ -2,13 +2,10 @@ symbols="!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
 function cherry(n){
   let s='';
   s+=symbols[n%32];
-  //console.log("s=",s);
   n=Math.floor(n/32);
   s+=String.fromCharCode(48+n%10);
-  //console.log("s=",s);
   n=Math.floor(n/10);
   s+=String.fromCharCode(65+n%26);
-  //console.log("s=",s);
   return s;
 };
 function makesub(n){
